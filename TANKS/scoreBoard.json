@@ -1,0 +1,714 @@
+{"scores": [
+  {
+    "name": "YCD",
+    "value": 200000
+  },
+  {
+    "name": "AXA",
+    "value": 100000
+  },
+  {
+    "name": "KVR",
+    "value": 59000
+  },
+  {
+    "name": "CCC",
+    "value": 55000
+  },
+  {
+    "name": "WEE",
+    "value": 51000
+  },
+  {
+    "name": "SAM",
+    "value": 47500
+  },
+  {
+    "name": "LAB",
+    "value": 19500
+  },
+  {
+    "name": "BAD",
+    "value": 13500
+  },
+  {
+    "name": "CAB",
+    "value": 8000
+  },
+  {
+    "name": "DRE",
+    "value": 7500
+  },
+  {
+    "name": "ZDW",
+    "value": 7500
+  },
+  {
+    "name": "BAB",
+    "value": 7000
+  },
+  {
+    "name": "DEB",
+    "value": 6500
+  },
+  {
+    "name": "BAD",
+    "value": 6000
+  },
+  {
+    "name": "CDE",
+    "value": 3500
+  },
+  {
+    "name": "CDC",
+    "value": 3500
+  },
+  {
+    "name": "KVR",
+    "value": 3000
+  },
+  {
+    "name": "CCC",
+    "value": 3000
+  },
+  {
+    "name": "CCC",
+    "value": 2500
+  },
+  {
+    "name": "REL",
+    "value": 2000
+  },
+  {
+    "name": "YAH",
+    "value": 1900
+  },
+  {
+    "name": "VIN",
+    "value": 1500
+  },
+  {
+    "name": "FAT",
+    "value": 1000
+  },
+  {
+    "name": "WEE",
+    "value": 1000
+  },
+  {
+    "name": "YCA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "QAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "AAA",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "",
+    "value": 1000
+  },
+  {
+    "name": "YZA",
+    "value": 700
+  },
+  {
+    "name": "CAD",
+    "value": 500
+  }
+]}

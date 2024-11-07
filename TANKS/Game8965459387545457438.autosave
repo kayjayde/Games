@@ -1,0 +1,123 @@
+class Game {
+  PImage cImg;
+  ScoreBoard sb;
+  int score;
+  int level;
+  Background bg;
+  Player p;
+  Player2 p2;
+  Enemy enemies[];
+  healing healings[];
+
+  Game() {
+    cImg = loadImage("player1.png");
+    sb = new ScoreBoard();
+    bg = new Background(width * 2, height * 2);
+    p = new Player(0, 0, bg.w, bg.h);
+    p2 = new Player2( 0, 0, bg.w, bg.h);
+    gameStart();
+  }
+
+  void gameStart() {
+    p.gameStart(0, 0);
+    p2.gameStart(0,0);
+    enemies = new Enemy[2];
+    healings = new healing[2];
+    enemies[0] = new Enemy(-400, 200);
+    enemies[1] = new Enemy(200, 600);
+    healings[0] = new healing(500, 500);
+    healings[1] = new healing(-800, 800);
+    score = 1000;
+    level = 1;
+  }
+
+  void display() {
+    p.update();
+    p2.update();
+    push();
+    cameraFollowPlayer(p.x, p.y);
+    bg.display();
+    for (Enemy e : enemies) {
+      e.display();
+    }
+    for (healing r : healings) {
+      r.display();
+    }
+    p.display();
+    p2.display();
+    pop();
+
+    sb.display();
+  }
+
+  void keyPressed() {
+    p.keyPressed();
+    p2.keyPressed();
+    switch(key) {
+    case 'a':
+      p.setSpeedX(-1);
+      break;
+    case 's':
+      p.setSpeedY(1);
+      break;
+    case 'w':
+      p.setSpeedY(-1);
+      break;
+    case 'd':
+      p.setSpeedX(1);
+      break;
+    case 'j':
+      p2.setSpeedX(-1);
+      break;
+    case 'k':
+      p2.setSpeedY(1);
+      break;
+    case 'i':
+      p2.setSpeedY(-1);
+      break;
+    case 'l':
+      p2.setSpeedX(1);
+      break;
+    }
+  }
+
+  void keyReleased() {
+    switch(key) {
+    case 'a':
+      p.setSpeedX(0);
+      break;
+    case 's':
+      p.setSpeedY(0);
+      break;
+    case 'w':
+      p.setSpeedY(0);
+      break;
+    case 'd':
+      p.setSpeedX(0);
+      break;
+      case 'j':
+      p2.setSpeedX(0);
+      break;
+    case 'k':
+      p2.setSpeedY(0);
+      break;
+    case 'i':
+      p2.setSpeedY(0);
+      break;
+    case 'l':
+      p2.setSpeedX(0);
+      break;
+    }
+  }
+
+  boolean gameOver() {
+    return p.health <= 0;
+    //return p2.health <= 0;
+  }
+
+  void cameraFollowPlayer(float x, float y) {
+    float xOffset = constrain(-x + width/2, -bg.w + 2 * width - p.w/2, bg.w - width + p.w/2);
+    float yOffset = constrain(-y + height/2, -bg.h + 2 * height - p.h/2, bg.h - height +  11);
+    translate(xOffset, yOffset);
+  }
+}

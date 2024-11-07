@@ -1,0 +1,29 @@
+class healing {
+  float x;
+  float y;
+  PImage inImg;
+  boolean ate;
+  int frames;
+
+  healing(float x, float y) {
+    this.x = x;
+    this.y = y;
+    inImg = loadImage("Healing.png");
+    inImg.resize(100, 100);
+    ate = false;
+    frames = 0;
+    x = 10000;
+    y = 10000;
+  }
+
+  void display() {
+    push();
+    rectMode(CENTER);
+    image(inImg, x, y);
+  }
+  if (frames > 15 * 60) {
+    x = 0;
+    y = 0;
+    pop();
+  }
+}

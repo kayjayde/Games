@@ -1,0 +1,143 @@
+class Player {
+  SoundFile shootSound, rotateSound;
+  float x;
+  float y;
+  float xVelo;
+  float yVelo;
+  float widthRestriction;
+  float heightRestriction;
+  float health;
+  float h;
+  float w;
+  float r;
+  float speed;
+  float rVelo;
+  ScoreBoard sb;
+  Bullet b;
+
+  Player(float x, float y, float widthRestriction, float heightRestriction) {
+    b = new Bullet(x, y);
+    this.x = x;
+    this.y = y;
+    h = 46;
+    w = 24;
+    r = 90;
+    speed = 5;
+    this.widthRestriction = widthRestriction - w;
+    this.heightRestriction = heightRestriction - h;
+    xVelo = 0;
+    yVelo = 0;
+    rVelo = 0;
+    health = 1;
+    shootSound = new SoundFile(TANKS.this, "tankshot.wav");
+    rotateSound = new SoundFile(TANKS.this, "turretrotate.mp3");
+  }
+
+  void update() {
+    x += xVelo;
+    y += yVelo;
+    r += rVelo;
+    x = constrain(x, -widthRestriction/2, widthRestriction/2);
+    y = constrain(y, -heightRestriction/2, heightRestriction/2);
+    b.update();
+  }
+
+  void display() {
+    push();
+    translate(x, y);
+    rectMode(CENTER);
+    if (x <= -550) {
+      xVelo = 0;
+      x++;
+    }
+    if ( x >=-930) {
+      xVelo = 0;
+      x--;
+    }
+    if (y <= -715) {
+      yVelo = 0;
+      y++;
+    }
+    if (y >= 925) {
+      yVelo = 0;
+      y--;
+    }
+    strokeWeight(5);
+    stroke(255);
+    fill(#185E07);
+    rect(0, 0, 75, 75);
+    strokeWeight(2);
+    fill(#0C2D04);
+    ellipse(0, 0, 35, 35);
+    rectMode(CORNER);
+    turret();
+    pop();
+    b.display();
+  }
+
+
+
+  void setSpeedX(float x) {
+    xVelo = x * speed;
+  }
+
+  void setSpeedY(float y) {
+    yVelo = y * speed;
+  }
+
+  void gameStart(float x, float y) {
+    this.x = x;
+    this.y = y;
+    b.x = x;
+    b.y = y;
+    xVelo = 0;
+    yVelo = 0;
+  }
+  void turret () {
+    push();
+    rotate(r);
+    rectMode(CORNER);
+    strokeWeight(2);
+    fill(#0C2D04);
+    rect(0, -4, 40, 10, 5);
+    pop();
+  }
+  void shoot() {
+    if (!shootSound.isPlaying()) {
+      shootSound.play();
+    }
+    b = new Bullet(x, y);
+    b.xVelo = cos(r)*40;
+    b.yVelo = sin(r)*40;
+  }
+
+  void keyPressed() {
+    switch(key) {
+    case '1':
+      if (!rotateSound.isPlaying()) {
+        rotateSound.play();
+      }
+      rVelo = 0.035;
+      break;
+    case '2':
+      if (!rotateSound.isPlaying()) {
+        rotateSound.play();
+      }
+      rVelo = -0.035;
+      break;
+    case '3':
+      shoot();
+      break;
+    }
+  }
+  void keyReleased() {
+    switch (key) {
+    case '1':
+      rVelo = 0;
+      break;
+    case '2':
+      rVelo = 0;
+      break;
+    }
+  }
+}

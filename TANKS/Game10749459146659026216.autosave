@@ -1,0 +1,192 @@
+class Game {
+  PImage cImg;
+  ScoreBoard sb;
+  int score;
+  int level;
+  Background bg;
+  Player p;
+  Player2 p2;
+  Enemy enemies[];
+  Healing healings[];
+
+  Game() {
+    cImg = loadImage("player1.png");
+    sb = new ScoreBoard();
+    bg = new Background(width * 2, height * 2);
+    p = new Player(0, 0, bg.w, bg.h);
+    p2 = new Player2( 0, 0, bg.w, bg.h);
+    gameStart();
+  }
+
+  void gameStart() {
+    p.gameStart(-550, 300);
+    p2.gameStart(550, -300);
+    enemies = new Enemy[5];
+    healings = new Healing[2];
+    enemies[0] = new Enemy(-400, 200);
+    enemies[1] = new Enemy(200, 600);
+    enemies[2] = new Enemy(600, -100);
+    enemies[3] = new Enemy(-300, -250);
+    enemies[4] = new Enemy(100, 0);
+    healings[0] = new Healing(300, 200);
+    healings[1] = new Healing(-300, 500);
+    score = 1000;
+    level = 1;
+  }
+
+  void display() {
+    p.update();
+    p2.update();
+    push();
+    cameraFollowPlayer(CENTER, CENTER);
+    bg.display();
+    for (Enemy e : enemies) {
+      e.display();
+      if (dist(e.x, e.y, p.x, p.y)<75 && e.hit == false) {
+        p.health -= 0.15;
+        sb.updateHealthBar(p.health);
+        e.hit = true;
+        println(p.health);
+      }
+      if (dist(e.x, e.y, p2.x, p2.y)<75 && e.hit == false) {
+        p2.health -= 0.15;
+        sb.updateHealthBar(p2.health);
+        e.hit = true;
+      }
+      if (dist(e.x, e.y, p.x, p.y)<90) {
+        p.speed = 2;
+      }
+      if (dist(e.x, e.y, p2.x, p2.y)<90) {
+        p2.speed = 2;
+      }
+      if (dist(e.x, e.y, p.b.x, p.b.y)<75) {
+        p.b.x = p.x;
+        p.b.y = p.y;
+        p.b.xVelo = 0;
+        p.b.yVelo = 0;
+      }
+      if (dist(e.x, e.y, p2.b.x, p2.b.y)<75) {
+        p2.b.x = p2.x;
+        p2.b.y = p2.y;
+        p2.b.xVelo = 0;
+        p2.b.yVelo = 0;
+      }
+    }
+    for (Healing h : healings) {
+      h.display();
+      if (dist(h.x, h.y, p.x, p.y)< 50 && h.ate == false) {
+        p.health += 0.10;
+        sb.updateHealthBar(p.health);
+        h.ate = true;
+        h.x = random(0, width);
+        h.y = random(0, height);
+        println(p.health);
+      }
+      if (dist(h.x, h.y, p2.x, p2.y)< 50 && h.ate == false) {
+        p2.health += 0.10;
+        sb.updateHealthBar(p2.health);
+        h.ate = true;
+        h.x = random(0, width);
+        h.y = random(0, height);
+        println(p.health);
+      }
+      if (p.health >= 1) {
+        p.health = 1;
+        sb.updateHealthBar(p.health);
+      }
+      if (p2.health >= 1) {
+        p2.health = 1;
+        sb.updateHealthBar(p.health);
+      }
+    }
+    p.display();
+    p2.display();
+    pop();
+    sb.display();
+    if (dist(p.b.x, p.b.y, p2.x, p2.y)<38) {
+      p2.health -= 0.34;
+      sb.updateHealthBar2(p2.health);
+    }
+    if (dist(p2.b.x, p2.b.y, p.x, p.y)<38) {
+      p.health -= 0.34;
+      sb.updateHealthBar(p.health);
+    }
+  }
+  void keyPressed() {
+    p.keyPressed();
+    p2.keyPressed();
+    switch(key) {
+    case 'a':
+      p.setSpeedX(-1);
+      p.speed = 5.5;
+      break;
+    case 's':
+      p.setSpeedY(1);
+      p.speed = 5.5;
+      break;
+    case 'w':
+      p.setSpeedY(-1);
+      p.speed = 5.5;
+      break;
+    case 'd':
+      p.setSpeedX(1);
+      p.speed = 5.5;
+      break;
+    case 'j':
+      p2.setSpeedX(-1);
+      p2.speed = 5.5;
+      break;
+    case 'k':
+      p2.setSpeedY(1);
+      p2.speed = 5.5;
+      break;
+    case 'i':
+      p2.setSpeedY(-1);
+      p2.speed = 5.5;
+      break;
+    case 'l':
+      p2.setSpeedX(1);
+      p2.speed = 5.5;
+      break;
+    }
+  }
+
+  void keyReleased() {
+    switch(key) {
+    case 'a':
+      p.setSpeedX(0);
+      break;
+    case 's':
+      p.setSpeedY(0);
+      break;
+    case 'w':
+      p.setSpeedY(0);
+      break;
+    case 'd':
+      p.setSpeedX(0);
+      break;
+    case 'j':
+      p2.setSpeedX(0);
+      break;
+    case 'k':
+      p2.setSpeedY(0);
+      break;
+    case 'i':
+      p2.setSpeedY(0);
+      break;
+    case 'l':
+      p2.setSpeedX(0);
+      break;
+    }
+  }
+
+  boolean gameOver() {
+    return p.health <= 0 ||  p2.health <= 0;
+  }
+
+  void cameraFollowPlayer(float x, float y) {
+    float xOffset = constrain(-x + width/2, -bg.w + 2 * width - p.w/2, bg.w - width + p.w/2);
+    float yOffset = constrain(-y + height/2, -bg.h + 2 * height - p.h/2, bg.h - height +  110);
+    translate(xOffset, yOffset);
+  }
+}
